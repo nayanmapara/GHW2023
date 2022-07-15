@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+    <!-- Header-->
+    <header class="masthead align-items-center">
+      <h1 class="mb-1">Random Number Generator</h1>
+      <div class="container px-4 px-lg-5 text-center">
+        <div class="row">
+          <div class="col-md-4 mx-auto">
+            <h1>{{number}}</h1>
+            <form action={{url_for('day5')}} method="POST"><br>
+              <div class="form-group">
+                <input type="int" class="form-control" name="max" placeholder="Minimum Value">
+              </div><br>
+              <div class="form-group">
+                <input type="int" class="form-control" name="min" placeholder="Maximum Value">
+              </div><br>
+              <div class='form-group'>
+                <center>
+                  <button type="submit" class="btn btn-primary btn-lg btn-default">Random</button>
+                </center>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <!-- Footer-->
+{% endblock %}
